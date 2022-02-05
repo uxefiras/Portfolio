@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Heromain, Description, Img, Hide } from "../style.js";
 function HeroSection() {
   return (
     <Heromain>
@@ -31,37 +32,5 @@ function HeroSection() {
     </Heromain>
   );
 }
-
-const Heromain = styled.div`
-  display: flex;
-  min-height: 90vh;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10rem;
-  color: white;
-`;
-
-const Description = styled.div`
-  flex: 1;
-
-  h2 {
-    font-weight: lighter;
-    padding-right: 5rem;
-  }
-`;
-
-const Img = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    width: 100%;
-    higth: 80vh;
-    object-fit: cover;
-  }
-`;
-
-const Hide = styled.div`
-  overflow: hidden;
-`;
 
 export default HeroSection;

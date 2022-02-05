@@ -31,7 +31,7 @@ button{
 }
 h2{
     font-weight: lighter;
-    font-size: 2.5rem;
+    font-size: 2rem;
 
 }
 h3{
