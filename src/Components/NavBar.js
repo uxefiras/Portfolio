@@ -1,21 +1,24 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <Nav>
       <div className="logo">
-        <h4>
-          Firas <span>Faraj</span>
-        </h4>
+        <Link to="/">
+          <a>
+            Firas <span>Faraj</span>
+          </a>
+        </Link>
       </div>
       <ul>
         <li>
-          <a href="">1. About Us</a>
+          <Link to="/">1. About Us</Link>
         </li>
         <li>
-          <a href="">2. Srvices</a>
+          <Link to="/services">2. Srvices</Link>
         </li>
         <li>
-          <a href="">3. Contact</a>
+          <Link to="/contact-us">3. Contact</Link>
         </li>
       </ul>
     </Nav>
@@ -29,8 +32,11 @@ const Nav = styled.nav`
   padding: 2rem 10rem;
   background: #282828;
   .logo {
-    h4 {
-      color: #fff;
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 0rem 1rem;
+      }
     }
   }
   ul {
