@@ -9,8 +9,10 @@ function ServicesSec() {
       {/* Section holder 2 */}
       <ServicesItems>
         {/* Section holder 3 */}
-        <div className="tittle">
-          <h3>Services Tittle</h3>
+        <div className="Tittle">
+          <h2>
+            We have <span>High</span> Quality Services
+          </h2>
         </div>
         {/* Section holder 4 */}
         <div className="sevices-itself">
@@ -19,7 +21,7 @@ function ServicesSec() {
             {/* Item holder 1 */}
             <SreviceItemsHolder>
               <ItemHolder>
-                <FontAwesomeIcon icon={faMoneyCheck} />
+                <FontAwesomeIcon icon={faMoneyCheck} style={ColorizeIcons} />
                 <p>Lorem, ipsum dolor.</p>
               </ItemHolder>
               <div className="description">
@@ -29,7 +31,7 @@ function ServicesSec() {
             {/* Item holder 2 */}
             <SreviceItemsHolder>
               <ItemHolder>
-                <FontAwesomeIcon icon={faMoneyCheck} />
+                <FontAwesomeIcon icon={faMoneyCheck} style={ColorizeIcons} />
                 <p>Lorem, ipsum dolor.</p>
               </ItemHolder>
               <div className="description">
@@ -39,7 +41,7 @@ function ServicesSec() {
             {/* Item holder 3 */}
             <SreviceItemsHolder>
               <ItemHolder>
-                <FontAwesomeIcon icon={faMoneyCheck} />
+                <FontAwesomeIcon icon={faMoneyCheck} style={ColorizeIcons} />
                 <p>Lorem, ipsum dolor.</p>
               </ItemHolder>
               <div className="description">
@@ -49,7 +51,7 @@ function ServicesSec() {
             {/* Item holder 4 */}
             <SreviceItemsHolder>
               <ItemHolder>
-                <FontAwesomeIcon icon={faMoneyCheck} />
+                <FontAwesomeIcon icon={faMoneyCheck} style={ColorizeIcons} />
                 <p>Lorem, ipsum dolor.</p>
               </ItemHolder>
               <div className="description">
@@ -71,12 +73,19 @@ function ServicesSec() {
 
 // redefined Styles
 
+const ColorizeIcons = { color: "#23d997 " };
+
 const Services = styled(Heromain)`
   flex-direction: row-reverse;
 `;
 const ServicesItems = styled(Description)`
   display: flex;
+
+  justify-content: space-around;
   flex-direction: column;
+  .Tittle {
+    margin-bottom: 5rem;
+  }
 `;
 
 const ItemsContainer = styled.div`
@@ -88,14 +97,19 @@ const SreviceItemsHolder = styled.div`
   display: flex;
   flex-basis: 15rem;
   flex-direction: column;
+
   .description {
     p {
       font-size: 1rem;
+      padding: 0rem;
+      margin: 2.5rem 0 2.5rem 0;
     }
   }
 `;
 const ItemHolder = styled.div`
   display: flex;
+  align-items: center;
+  margin-bottom: -2rem;
   p {
     padding: 0rem 0rem 0rem 0.5rem;
     font-size: 1.2rem;
