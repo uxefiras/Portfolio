@@ -25,7 +25,7 @@ function NavBar() {
   );
 }
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   min-height: 5rem;
