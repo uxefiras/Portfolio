@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { PageAnimation } from "../PageAnimation";
 function Services() {
   return (
     <div className="services">
-      <ServiceItself>
+      <ServiceItself
+        variants={PageAnimation}
+        initial="initial"
+        animate="show"
+        exit="exit"
+      >
         <h1>Service 1</h1>
         <div className="line"> </div>
         <Link to="/services/DroobUni">
@@ -27,7 +34,7 @@ function Services() {
   );
 }
 
-const ServiceItself = styled.div`
+const ServiceItself = styled(motion.div)`
   display: block;
   min-height: 100vh;
   padding: 5rem 10rem;

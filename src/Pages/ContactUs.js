@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
+import { PageAnimation } from "../PageAnimation";
 function ContactUs() {
   return (
-    <div className="contact-us">
+    <motion.div
+      variants={PageAnimation}
+      initial="initial"
+      animate="show"
+      exit="exit"
+    >
       <h1>Contact us</h1>
-    </div>
+    </motion.div>
   );
 }
 
