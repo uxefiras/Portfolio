@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Heromain = styled.div`
+export const Heromain = styled(motion.div)`
   display: flex;
+  position: relative;
+  overflow: hidden;
   min-height: 90vh;
   align-items: center;
   justify-content: space-between;
