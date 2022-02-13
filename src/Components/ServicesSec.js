@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoneyCheck } from "@fortawesome/free-solid-svg-icons";
-import { Heromain, Description, Img, Hide } from "../style.js";
+import { useScroll } from "./useScroll.js";
+import { fade } from "../PageAnimation";
+import { Heromain, Description, Img } from "../style.js";
 import styled from "styled-components";
 function ServicesSec() {
+  const [ref, controls] = useScroll();
   return (
     // Section Holder
-    <Services>
+    <Services ref={ref} animate={controls} variants={fade} initial="initial">
       {/* Section holder 2 */}
       <ServicesItems>
         {/* Section holder 3 */}
